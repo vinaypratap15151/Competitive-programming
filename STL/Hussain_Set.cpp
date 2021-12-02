@@ -77,40 +77,40 @@ int main()
 {
     ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
-             int n,m;
-               cin>>n>>m;
-               vl a(n);
-               fo(i,n){
-                   cin>>a[i];
-               }
-                
-                   queue<ll> q;
-                 sortall(a);
-            
-                
-                 
-          int count_m=0 ,end_p=n-1;      
-while(m--){
-    int curr_m;
-    ll ans;
-    cin>>curr_m;
-    for(; count_m<curr_m;count_m++){
-      if( end_p>=0 && (a[end_p]>=q.front() ||  q.empty())){
-         ans =a[end_p];
-         end_p--;
+    int n, m;
+    cin >> n >> m;
+    vl a(n);
+    fo(i, n)
+    {
+        cin >> a[i];
     }
-    else{
-        ans = q.front();
-        q.pop();
-    }
-    q.push(ans/2);
-    }
-    
-cout<<ans<<endl;
-    
 
-}
+    queue<ll> q;
+    sortall(a);
 
-    
+    int count_m = 0, end_p = n - 1;
+    while (m--)
+    {
+        int curr_m;
+        ll ans;
+        cin >> curr_m;
+        for (; count_m < curr_m; count_m++)
+        {
+            if (end_p >= 0 && (a[end_p] >= q.front() || q.empty()))
+            {
+                ans = a[end_p];
+                end_p--;
+            }
+            else
+            {
+                ans = q.front();
+                q.pop();
+            }
+            q.push(ans / 2);
+        }
+
+        cout << ans << endl;
+    }
+
     return 0;
 }
