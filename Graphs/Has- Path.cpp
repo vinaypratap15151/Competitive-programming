@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-int flag = 0;
+
 bool check_path(vector<vector<int>> &edges, int v, int sv, int ev, vector<bool> &visited)
 {
     if (sv == ev)
