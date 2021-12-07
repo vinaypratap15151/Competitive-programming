@@ -52,7 +52,7 @@ bool dfs(vector<vector<char>> &v, int i, int j, int k, int x, int y, vector<vect
     {
         x = i;
         y = j;
-        visited[x][j] = false;
+        visited[x][y] = false;
     }
 
     for (int t = 0; t < 4; t++)
