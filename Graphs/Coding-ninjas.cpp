@@ -52,7 +52,7 @@ bool dfs(vector<vector<char>> &g, int n, int m, int idx, int i, int j, vector<ve
         int x = i + dx[k];
         int y = j + dy[k];
 
-        if (s[idx] == g[x][y] and valid(x, y, n, m) and dfs(g, n, m, idx + 1, x, y, visited, s))
+        if (valid(x, y, n, m) and s[idx] == g[x][y] and  dfs(g, n, m, idx + 1, x, y, visited, s))
         {
             return true;
         }
