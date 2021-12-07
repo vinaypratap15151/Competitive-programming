@@ -1,3 +1,31 @@
+// Given a NxM matrix containing Uppercase English Alphabets only. Your task is to tell if there is a path in the given matrix which makes the sentence “CODINGNINJA” .
+// There is a path from any cell to all its neighbouring cells. A neighbour may share an edge or a corner.
+    
+// Input Format :
+// First line will contain T(number of test case), each test case follows as.
+// Line 1 : Two space separated integers N  and M, where N is number of rows and M is number of columns in the matrix.
+// Next N lines : N rows of the matrix. First line of these N line will contain 0th row of matrix, second line will contain 1st row and so on
+// Assume input to be 0-indexed based
+
+// Output Format :
+// Print 1 if there is a path which makes the sentence “CODINGNINJA” else print 0, for each test case in a new line
+
+// Constraints :
+// 1 <= T <= 10
+// 1 <= N <= 1000
+// 1 <= M <= 1000
+    
+// Sample Input :
+// 1
+// 2 11
+// CXDXNXNXNXA
+// XOXIXGXIXJX
+
+// Sample Output :
+// 1
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
 int dx[] = {1, 0, -1, 0, 1, -1, 1, -1};
