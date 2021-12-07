@@ -1,3 +1,36 @@
+// Its Gary's birthday today and he has ordered his favourite square cake consisting of '0's and '1's . But Gary wants the biggest piece of '1's and no '0's . 
+//  A piece of cake is defined as a part which consist of only '1's, and all '1's share an edge with eachother on the cake. 
+// Given the size of cake N and the cake , can you find the size of the biggest piece of '1's for Gary ?
+    
+// Input Format :
+// First line will contain T(number of test cases), each test case follows as.
+// Line 1 : An integer N denoting the size of cake 
+// Next N lines : N characters denoting the cake
+
+// Output Format :
+// Print the size of the biggest piece of '1's and no '0'sfor each test case in a newline.
+    
+// Constraints:
+// 1 <= T <= 10
+// 1 <= N <= 1000
+    
+// Sample Input :
+// 1
+// 2
+// 11
+// 01
+    
+// Sample Output :
+// 3
+
+
+
+
+
+
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
