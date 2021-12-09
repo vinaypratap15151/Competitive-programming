@@ -33,14 +33,28 @@
 // 6-3 = 3; 3/10 = 0; 3-0 = 3
 // 3-3 = 0; 0/10 = 0; 0-0 = 0
 
-
-
-
-
-
 #include <bits/stdc++.h>
 using namespace std;
-bool check(long long, long long);
+
+bool check(long long k, long long n)
+{
+    long long sum = 0;
+    long long in = n;
+    while (in > 0)
+    {
+        sum += min(in, k);
+        in = in - k;
+        in = in - (in / 10);
+    }
+
+    if ((2 * sum) >= n)
+    {
+        return true;
+    }
+
+    return false;
+}
+
 int main()
 {
 
@@ -75,21 +89,3 @@ int main()
     return 0;
 }
 
-bool check(long long k, long long n)
-{
-    long long sum = 0;
-    long long in = n;
-    while (in > 0)
-    {
-        sum += min(in, k);
-        in = in - k;
-        in = in - (in / 10);
-    }
-
-    if ((2 * sum) >= n)
-    {
-        return true;
-    }
-
-    return false;
-}
