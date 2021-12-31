@@ -1,22 +1,24 @@
-
 #include<bits/stdc++.h>
-int findDuplicate(int *arr, int n)
+void rotate(int *input, int d, int n)
 {
     //Write your code here
-    unordered_map<int ,int> m;
+    vector<int> v;
+
     
-    for(int i=0;i<n;i++){
-        m[arr[i]]++;
+    for(int i=0;i<d;i++){
+        v.push_back(input[i]);
+    }    
+    
+    for(int i=d;i<n;i++){
         
+        input[i-d]=input[i];
         
         
     }
-    
-    for(int i=0;i<n;i++){
-        
-        if(m[arr[i]]==2){
-            return arr[i];
-        }
+    int j=0;
+    for(int i=n-d;i<n;i++ ){
+        input[i]=v[j];
+        j++;
     }
     
     
